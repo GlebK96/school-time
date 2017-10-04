@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Ling;
+using System.Text;
+using System.Threading.Tasks;
+namespace Fibonacci
+{ 
+class Program
+{ 
+private static readonly int i;
+static void Main(string[] args )
+{
+string s = Console.ReadLine();
+int n = Convert.ToInt32(s);
+int[] Fibonacci = new int[149];
+Fibonacci[0]=0;
+Fibonacci[1]=1;
+int summa;
+for (int i=0; i<n; i++)
+{
+summa=Fibonacci[1]+Fibonacci[0];
+Fibonacci[0]=Fibonacci[1];
+Fibonacci[1]=summa;
+}
+Console.Write(Fibonacci[i]+" ");
+Console.ReadKey();
+}
+}
+}
